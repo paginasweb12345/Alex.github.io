@@ -1,0 +1,31 @@
+<section class="aspiraciones-pro">
+  <div class="intro">
+    <h1>{{ 'mis grandes aspiraciones' | titlecase }}</h1>
+    <p>{{ frase | titlecase }}</p>
+    <p>Creado por: {{ nombre | uppercase }} — {{ profesion | titlecase }}</p>
+    <p>Fecha actual: {{ fecha | date:'fullDate' }}</p>
+    <p>Monto estimado de inversión: {{ monto | currency:'USD':'symbol':'1.2-2' }}</p>
+    <p>Progreso hacia metas: {{ progreso | percent:'1.0-0' }}</p>
+  </div>
+
+  <div class="timeline">
+    <div class="card left">
+      <h2>{{ 'Desarrollar una empresa tecnológica' | uppercase }}</h2>
+      <p>Meta principal: {{ datos.meta }} — Año: {{ datos.anio }}</p>
+    </div>
+
+    <div class="card right">
+      <h2>{{ 'Convertirme en un líder en innovación' | titlecase }}</h2>
+      <p>Habilidades clave: {{ habilidades.join(', ') }}</p>
+    </div>
+
+    <div class="card left">
+      <h2>{{ 'Inspirar a nuevas generaciones' | titlecase }}</h2>
+      <p>{{ 'compartir mi conocimiento con otros' | titlecase }}</p>
+    </div>
+  </div>
+
+  <div class="final">
+    <h3>"{{ frase | uppercase }}"</h3>
+  </div>
+</section>

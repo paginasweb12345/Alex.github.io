@@ -1,0 +1,136 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== SECCIÓN PRINCIPAL ===== */
+.goals-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0f1f, #1b003a, #001f3f);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== CABECERA ===== */
+.goals-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+}
+
+.goals-header h1 {
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+}
+
+.goals-header p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* ===== TIMELINE ===== */
+.goals-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+}
+
+/* Línea de conexión */
+.goals-timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  height: 3px;
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  opacity: 0.3;
+  border-radius: 3px;
+}
+
+/* ===== TARJETAS ===== */
+.goal-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 240px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.15);
+  transition: all 0.4s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.goal-card:hover {
+  transform: translateY(-10px);
+  border-color: #06b6d4;
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+}
+
+/* ===== AÑO ===== */
+.year {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #06b6d4;
+  margin-bottom: 10px;
+}
+
+/* ===== TEXTO ===== */
+.goal-card h3 {
+  font-size: 1.1rem;
+  color: #a78bfa;
+  margin-bottom: 10px;
+}
+
+.goal-card p {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .goals-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .goal-card {
+    width: 90%;
+  }
+
+  .goals-timeline::before {
+    display: none;
+  }
+
+  .goals-timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+}

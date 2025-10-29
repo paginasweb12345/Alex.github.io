@@ -1,0 +1,70 @@
+/* Contenedor principal */
+.hobbies-container {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Título */
+.hobbies-container h1 {
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Grid de hobbies */
+.hobbies-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas de cada hobby */
+.hobby-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Imagen de cada hobby */
+.hobby-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Nombre del hobby */
+.hobby-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+/* Descripción del hobby */
+.hobby-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Invitación final */
+.invitation {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4500;
+}

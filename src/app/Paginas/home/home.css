@@ -1,0 +1,100 @@
+.contenedor-principal {
+  display: flex;               /* Coloca los cuadros lado a lado */
+  justify-content: center;     /* Centra horizontalmente */
+  align-items: flex-start;     /* Alinea por la parte superior */
+  gap: 40px;                   /* Separación entre los cuadros */
+  padding: 50px;
+  background-color: #0f111a;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo común para ambos cuadros */
+.cuadro {
+  background-color: #1e1f2f;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15); /* sombra más suave */
+  padding: 25px;
+  width: 350px;
+  min-height: 450px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cuadro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+/* Foto de perfil */
+.perfil-foto {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #00ffff;
+}
+
+/* Redes sociales */
+.redes-sociales a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+}
+
+.redes-sociales a:hover {
+  color: #ffd700;
+}
+
+/* Login específico */
+.login-cuadro {
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.15);
+}
+
+.login-cuadro h3 {
+  color: #ffff66;
+  margin-bottom: 15px;
+}
+
+.login-cuadro input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #00ffff;
+  background-color: #111222;
+  color: #fff;
+}
+
+.login-cuadro input::placeholder {
+  color: #888;
+}
+
+.login-cuadro button {
+  width: 95%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #ffff66;
+  color: #1e1f2f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-cuadro button:hover {
+  background-color: #ffd700;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* 💬 Estilo del saludo (suave y limpio) */
+.mensaje-saludo {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #f0f0f0; /* blanco suave */
+  text-shadow: none; /* sin brillo */
+  animation: none; /* sin efecto */
+}

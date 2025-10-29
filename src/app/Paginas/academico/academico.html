@@ -1,0 +1,38 @@
+<section class="academico">
+  <div class="academico-container">
+    <h1>{{ titulo | uppercase }}</h1>
+
+    <div class="academico-card">
+      <h2>{{ subtitulo1 | titlecase }}</h2>
+      <p>
+        Actualmente curso la carrera de <strong>{{ carrera | uppercase }}</strong>,
+        donde desarrollo habilidades en programación, arquitectura de software,
+        bases de datos y metodologías ágiles.
+        Mi objetivo es dominar la creación de soluciones tecnológicas que impulsen la innovación.
+      </p>
+    </div>
+
+    <div class="academico-card">
+      <h2>{{ subtitulo2 | titlecase }}</h2>
+      <p>
+        He completado diversos cursos en <strong>{{ cursos | lowercase }}</strong>
+        y <strong>{{ especialidad | titlecase }}</strong>,
+        fortaleciendo mis conocimientos técnicos y mi visión sobre los sistemas modernos.
+      </p>
+    </div>
+
+    <div class="academico-card">
+      <h2>{{ subtitulo3 | titlecase }}</h2>
+      <p>
+        Participo activamente en proyectos de investigación, incluyendo el desarrollo
+        de un <strong>{{ proyecto | titlecase }}</strong> y su relación con el
+        <strong>{{ tema | uppercase }}</strong>.
+        Este trabajo combina tecnología, análisis de datos y mejora del aprendizaje estudiantil.
+      </p>
+    </div>
+
+    <div class="academico-final">
+      <p>“{{ frase | uppercase }}”</p>
+    </div>
+  </div>
+</section>

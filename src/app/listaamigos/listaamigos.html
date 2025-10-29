@@ -1,0 +1,26 @@
+<h2>👥 Lista de Amigos y sus Hobbies</h2>
+
+<!--  Mensaje de carga -->
+<div *ngIf="cargando" class="cargando">
+  ⏳ Cargando lista de amigos...
+</div>
+
+<!--  Contenido principal (solo se muestra cuando ya cargó) -->
+<div *ngIf="!cargando" class="contenedor">
+  <!-- Recorremos la lista de amigos -->
+  <div class="tarjeta" *ngFor="let amigo of amigos">
+    <h3>{{ amigo.nombre }}</h3>
+    <p>Deporte favorito: {{amigo.deporte}} </p>
+    <h4>Hobbies:</h4>
+
+    <!-- Si el amigo tiene hobbies, mostramos la lista -->
+    <ul *ngIf="amigo.hobbies.length > 0; else noHobbies">
+      <li *ngFor="let hobbie of amigo.hobbies">{{ hobbie }}</li>
+    </ul>
+
+    <!-- Si no tiene hobbies, mostramos este mensaje -->
+    <ng-template #noHobbies>
+      <p class="no-hobbies">No tiene hobbies registrados</p>
+    </ng-template>
+  </div>
+</div>

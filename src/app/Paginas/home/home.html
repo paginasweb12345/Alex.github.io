@@ -1,0 +1,28 @@
+<div class="contenedor-principal">
+  <!-- Perfil a la izquierda -->
+  <div class="cuadro">
+    <img class="perfil-foto" src="perfil.jpg" alt="Foto de Alex">
+    <h2>Alex Jhon Alhuay Uquiche</h2>
+    <p class="carrera">Ingeniería de Sistemas</p>
+    <p class="email">alex.alhuay@gmail.com</p>
+    <p class="telefono">+51 943 399 810</p>
+
+    <div class="redes-sociales">
+      <a href="https://roadmap.sh/" target="_blank">Roadmap</a>
+      <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- Login a la derecha -->
+  <div class="cuadro login-cuadro">
+    <h3>INGRESA TUS DATOS PARA SALUDARTE</h3>
+    <input type="text" placeholder="Nombre" [(ngModel)]="nombre" />
+    <input type="text" placeholder="Apellido" [(ngModel)]="apellido" />
+    <input type="text" placeholder="Numero" [(ngModel)]="numero" />
+    <input type="email" placeholder="Correo" [(ngModel)]="correo" />
+    <button (click)="empezar()">Empezar</button>
+
+    <!-- Mensaje de saludo -->
+    <p *ngIf="saludo" class="mensaje-saludo">{{ saludo }}</p>
+  </div>
+</div>
